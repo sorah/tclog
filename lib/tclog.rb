@@ -1,6 +1,8 @@
 module TCLog
   class Game
-    def initialize
+    def initialize(orders = [], gametype = :obj)
+      @orders = orders
+      @gametype = gametype
       @rounds = []
       @round_n = 0
       @players = {}
@@ -19,8 +21,9 @@ module TCLog
       end
     end
 
+
     def add_map(map_name)
-      @rounds << Round.new(nil, true, map_name); self
+      @rounds << Round.new(nil, nil, :map, true, map_name); self
     end
 
     def add_round(specops,terrorists,won)
@@ -40,7 +43,7 @@ module TCLog
 
     def round; @round_n; end
     def [](i); @rounds[i]; end
-    attr_reader :rounds, :players
+    attr_reader :rounds, :players, :orders, :gametype
   end
   class Round
     def initialize(game, n, win, map_changing = false, map_name = nil)
@@ -61,7 +64,7 @@ module TCLog
 
     def map_changing?; @map_changing;        end
     def map_changing=(x); @map_changing = x; end
-    attr_accessor :map_name, :specops, :terrorists
+    attr_accessor :map_name, :specops, :terrorists, :won
     attr_reader :round_number
   end
   class Player
@@ -120,7 +123,12 @@ module TCLog
     # Drop waste lines / Drop waste message
     renames = {}
     orders = log.map do |x|
-      next unless /^(\[skipnotify\])?(\^.)?(Specops|Terrorists|LOADING\.\.\. maps|Planted|Defused|Match starting|.+renamed|Timelimit hit)/ =~ x
+      next unless /^(\[skipnotify\])(\^.)?(.+renamed|Timelimit hit)/ =~ x ||
+                  /^(\[skipnotify\])?(\^.)?(Specops|Terrorists)/     =~ x ||
+                  /^(\[skipnotify\])?(\^.)?(Planted|Defused)/        =~ x ||
+                  /^The .+ have completed the objective!/            =~ x ||
+                  /^(\[skipnotify\])(\^.)(Overall stats for: |)/     =~ x ||
+                  /^(LOADING\.\.\. maps|Match starting)/             =~ x
       x.gsub!(/\[skipnotify\]/,"") 
       # Player Score
       r = x.scan(/\^.(Terrorists|Specops)\^. *\^.(.+?)\^. *([\d\-]+) +([\d\-]+) +([\d\-]+) +([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)/).flatten
@@ -131,15 +139,26 @@ module TCLog
           ["Map",m[0]]
         when /^Match starting/ # Match starting
           ["Match"]
-        when /^(Planted) at (.+?) \[(.)\]/ # TeroWin
+        when /^(Planted) at (.+?) \[(.)\]/, /^The Terrorists have completed the objective!/ # TeroWin
           m = $~.captures
           m[0] = "TerroristsWin"
           m
-        when /Timelimit hit/, /^(Defused) at (.+?) \[(.)\]/ # Specops Win
+        when /^(Defused) at (.+?) \[(.)\]/, /^The Specops have completed the objective!/ # Specops Win
           m = $~.captures
           m[0] = "SpecopsWin"
-          m[1] = "Timelimit" if /Timelimit hit\./ =~ x
           m
+        when /Timelimit hit/
+          if gametype == :obj
+            ["SpecopsWin"]
+          else
+            ["UnknownWin"]
+          end
+        when /^(\[skipnotify\])(\^.)(Overall stats for: |)/
+          if gametype == :bc
+            ["UnknownWin"]
+          else
+            nil
+          end
         when /\^.(.+?)\^. \^.(Totals) *([\d\-]+) +([\d\-]+) +([\d\-]+) +([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)\^. *([\d\-]+)/ # Team total score?
           r = $~.captures
           r[0] << "Total"
@@ -192,7 +211,7 @@ module TCLog
     #pp orders
 
     match_flag = false
-    game = Game.new
+    game = Game.new(orders, gametype)
     match = []
     match_wins = nil
     map_change = nil
@@ -204,11 +223,13 @@ module TCLog
       end
       if o[0] == "Match"
         if match_flag
-          if map_change
+          if map_change && (specops_total || !match_wins)
             game.add_map map_change[1]
             match_flag = false
             map_change = nil
-          else
+            match_flag = true
+          end
+          if specops_total && match_wins
             match_flag = false
             game.add_round(specops_total,terrorists_total, match_wins)
             match_flag = true
@@ -216,6 +237,9 @@ module TCLog
         else
           match_flag = true
         end
+      end
+      if o[0] == "UnknownWin"
+        match_wins = :unknown
       end
       if o[0] == "TerroristsWin"
         match_wins = :terrorists
@@ -234,6 +258,7 @@ module TCLog
       end
       if match_flag && "SpecopsTotal" == o[0]
         specops_total = o[1]
+        match_wins = compare_score(terrorists_total, specops_total) if match_wins == :unknown
       end
       if match_flag && "TerroristsWin" == o[0]
         match_wins = :terrorists
@@ -254,6 +279,14 @@ module TCLog
 
     vm.call(["Match"]) if match_flag
     game
+  end
+
+  def self.compare_score(terrorists, specops)
+    if terrorists[:score] > specops[:score]
+      :terrorists
+    else
+      :specops
+    end
   end
 end
 
