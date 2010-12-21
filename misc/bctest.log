@@ -1,0 +1,556 @@
+logfile opened on Tue Dec 21 14:30:17 2010
+
+]/ref timelimit 1
+[skipnotify]^3Timelimit set to: ^51
+[skipnotify]Server: timelimit changed to 1
+*Pasra* @sora_h^7: ^7are?
+Glass_saga^7: ^7BC?
+*Pasra* @sora_h^7: ^7BC
+*Pasra* @sora_h^7: ^7sudden death
+^4Glass_saga <<< ^1*Pasra* @sora_h (AK-47)
+[skipnotify]Timelimit hit.
+[skipnotify]^7Overall stats for: ^3*Pasra* @sora_h ^7(^20^7 Rounds)
+
+[skipnotify]Weapon     Acrcy Hits/Atts Kills Deaths Headshots
+[skipnotify]-------------------------------------------------
+[skipnotify]^3MP-40    : ^7  0.0 ^5   6/0    ^2    1 ^1     0 ^3        0
+[skipnotify]^3FG-42    : ^7  0.0 ^5   0/20   ^2    0 ^1     0 ^3        0
+[skipnotify]^3Grenade  : ^7  0.0 ^5   0/1    ^2    0 ^1     0
+[skipnotify]
+^3Damage Given: ^7200     ^3Team Damage: ^70
+[skipnotify]^3Damage Recvd: ^70
+[skipnotify]
+^2Rank: ^7Schutze (1 XP)
+[skipnotify]Skills         Level/Points
+[skipnotify]---------------------------
+[skipnotify]Battle Sense   ^30 (1/20)    
+[skipnotify]
+^7TEAM   Player          Kll Dth Sui TK Eff  ^3AA^7 ^2DG    ^1DR   ^6TD  ^3Score
+^7---------------------------------------------------------------------
+[skipnotify]^1Terrorists^7 ^3*Pasra* @sora_h^3   1   0   0  0^3 100^3   2^2   200^1     0^6    0^3      1
+[skipnotify]^7---------------------------------------------------------------------
+^1Terrorists^7 ^5Totals            1   0   0  0^5 100^3   0^2   200^1     0^6    0^3      1
+[skipnotify]
+^7TEAM   Player          Kll Dth Sui TK Eff  ^3AA^7 ^2DG    ^1DR   ^6TD  ^3Score
+^7---------------------------------------------------------------------
+[skipnotify]^4Specops^7 ^7Glass_saga     ^3   0   1   0  0^7   0^3   2^2     0^1   200^6    0^3     -1
+[skipnotify]^7---------------------------------------------------------------------
+^4Specops^7 ^5Totals            0   1   0  0^5   0^3  -1^2     0^1   200^6    0^3     -1
+[skipnotify]
+
+[skipnotify]Server: timelimit changed to 20
+[skipnotify]*Pasra* @sora_h^7 entered the game
+[skipnotify]Glass_saga^7 entered the game
+]/unref
+[skipnotify]unknown cmd unref
+]/ref unreferee
+Use the ^3players^7 command to find a valid player ID.
+]/ref
+[skipnotify]
+^3Referee commands:^7
+[skipnotify]------------------------------------------
+^5comp             map              pub              unreferee        
+^5gametype         maprestart       referee          warmupdamage     
+^5kick             matchreset       startmatch       antilag          
+^5mute             mutespecs        swapteams        balancedteams    
+^5unmute           nextmap          timelimit        
+[skipnotify]
+^5allready         putallies^7 <pid>  ^5speclock          warmup
+[skipnotify]^5lock             putaxis^7 <pid>    ^5specunlock        warn ^7<pid>
+[skipnotify]^5help             remove           unlock            mute ^7<pid>
+[skipnotify]^5pause            restart          unpause           unmute ^7<pid>
+[skipnotify]Usage: ^3\ref <cmd> [params]
+
+]/ref unreferee
+Use the ^3players^7 command to find a valid player ID.
+]/ref unreferee me
+[skipnotify]User me is not on the server
+]/ref players
+[skipnotify]
+^3Referee commands:^7
+[skipnotify]------------------------------------------
+^5comp             map              pub              unreferee        
+^5gametype         maprestart       referee          warmupdamage     
+^5kick             matchreset       startmatch       antilag          
+^5mute             mutespecs        swapteams        balancedteams    
+^5unmute           nextmap          timelimit        
+[skipnotify]
+^5allready         putallies^7 <pid>  ^5speclock          warmup
+[skipnotify]^5lock             putaxis^7 <pid>    ^5specunlock        warn ^7<pid>
+[skipnotify]^5help             remove           unlock            mute ^7<pid>
+[skipnotify]^5pause            restart          unpause           unmute ^7<pid>
+[skipnotify]Usage: ^3\ref <cmd> [params]
+
+]/players
+[skipnotify]
+^3Status^1   : ^3ID^1 : ^3Player                    Nudge  Rate  MaxPkts  Snaps
+[skipnotify]^1---------------------------------------------------------------------^7
+[skipnotify]NOTREADY^1 :^1X^7 4 ^1:^3 *pasra* @sora_h           ^7    0 13000      100     85  ^3REF
+[skipnotify]NOTREADY^1 :^4L^7 5 ^1:^7 glass_saga                ^7    0 13000      100     40  ^3
+[skipnotify]
+^3 2^7 total players
+
+]/ref unreferee 4
+[skipnotify]^3*** You have been stripped of your referee status! ***
+[skipnotify]*Pasra* @sora_h^7 called a vote.  Voting for: Change map to obj_railhouse
+^5Vote passed!
+Current search path:
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak4.pk3 (113 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak3.pk3 (411 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak2.pk3 (2066 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak1.pk3 (1869 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak0.pk3 (728 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\mp_bin.ba9c8589.pk3 (6 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak2.pk3 (22 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak1.pk3 (10 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak0.pk3 (3725 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\mp_bin.pk3 (6 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_v5pack.pk3 (3 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_mapscripts.pk3 (13 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_gear.pk3 (2 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_v5pack.pk3 (3 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_ctf_server_v7.pk3 (286 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_ctf_server_v6.pk3 (286 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_allweapons2_ver.1.1.pk3 (7 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\wip_skirmish.pk3 (155 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_villa2_1.pk3 (106 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_tm_garage_b2.pk3 (31 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_The_Eighth_Storehouse_beta1.pk3 (12 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_terrorAlpha9.pk3 (17 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_superknife5.pk3 (27 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_superknife4_fixed.pk3 (21 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_slider_on_my_load.pk3 (18 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_siege2_fixed.pk3 (13 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_shiprivBeta9.pk3 (29 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_SCO_Practice.pk3 (12 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_railhouse048_4.pk3 (26 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_Portal_of_Town.pk3 (28 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_jetslidedxAlpha3.pk3 (18 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_hide_hotel.pk3 (14 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_fracture_v2.pk3 (91 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_extend_classic.pk3 (29 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_ersatz048.pk3 (34 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_dropopAlpha4.pk3 (14 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_complexityBeta13.pk3 (26 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_closedownBeta1.pk3 (15 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_bloc_012.pk3 (33 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_blockmazeAlpha3.pk3 (29 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\mp_bin.pk3 (6 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\048collections_r2.pk3 (19 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory/tcetest
+C:\Program Files\Wolfenstein - Enemy Territory/etmain
+
+handle 1: etconsole.log
+----------------------
+31137 files in pk3 files
+RE_Shutdown( 0 )
+Hunk_Clear: reset the hunk ok
+----- R_Init -----
+
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: NVIDIA GeForce 9400M OpenGL Engine
+GL_VERSION: 2.1 NVIDIA-1.6.24
+GL_EXTENSIONS:  GL_ARB_transpose_matrix GL_ARB_vertex_program GL_ARB_vertex_blend GL_ARB_window_pos GL_ARB_shader_objects GL_ARB_vertex_shader GL_ARB_shading_language_100 GL_EXT_multi_draw_arrays GL_EXT_clip_volume_hint GL_EXT_rescale_normal GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_gpu_program_parameters GL_EXT_geometry_shader4 GL_EXT_transform_feedback GL_APPLE_client_storage GL_APPLE_specular_vector GL_APPLE_transform_hint GL_APPLE_packed_pixels GL_APPLE_fence GL_APPLE_vertex_array_object GL_APPLE_vertex_program_evaluators GL_APPLE_element_array GL_APPLE_flush_render GL_APPLE_aux_depth_stencil GL_NV_texgen_reflection GL_NV_light_max_exponent GL_IBM_rasterpos_clip GL_SGIS_generate_mipmap GL_ARB_imaging GL_ARB_point_parameters GL_ARB_texture_env_crossbar GL_ARB_texture_border_clamp GL_ARB_multitexture GL_ARB_texture_env_add GL_ARB_texture_cube_map GL_ARB_texture_env_dot3 GL_ARB_multisample GL_ARB_texture_env_combine GL_ARB_texture_compression GL_ARB_texture_mirrored_repeat GL_ARB_shadow GL_ARB_depth_texture GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_occlusion_query GL_ARB_point_sprite GL_ARB_texture_non_power_of_two GL_ARB_vertex_buffer_object GL_ARB_pixel_buffer_object GL_ARB_draw_buffers GL_ARB_shader_texture_lod GL_ARB_color_buffer_float GL_ARB_half_float_vertex GL_ARB_texture_rg GL_ARB_texture_compression_rgtc GL_ARB_framebuffer_object GL_EXT_compiled_vertex_array GL_EXT_draw_buffers2 GL_EXT_framebuffer_object GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_texture_rectangle GL_ARB_texture_rectangle GL_EXT_texture_env_add GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_texture_lod_bias GL_EXT_abgr GL_EXT_bgra GL_EXT_stencil_wrap GL_EXT_texture_filter_anisotropic GL_EXT_secondary_color GL_EXT_blend_func_separate GL_EXT_shadow_funcs GL_EXT_stencil_two_side GL_EXT_depth_bounds_test GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_sRGB GL_EXT_blend_equation_separate GL_EXT_texture_mirror_clamp GL_EXT_packed_depth_stencil GL_EXT_bindable_uniform GL_EXT_texture_integer GL_EXT_gpu_shader4 GL_EXT_framebuffer_sRGB GL_EXT_provoking_vertex GL_APPLE_flush_buffer_range GL_APPLE_ycbcr_422 GL_APPLE_rgb_422 GL_APPLE_vertex_array_range GL_APPLE_texture_range GL_APPLE_float_pixels GL_ATI_texture_float GL_ARB_texture_float GL_ARB_half_float_pixel GL_APPLE_pixel_buffer GL_APPLE_object_purgeable GL_NV_point_sprite GL_NV_blend_square GL_NV_fog_distance GL_NV_depth_clamp GL_NV_multisample_filter_hint GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_conditional_render GL_ATI_texture_mirror_once GL_ATI_texture_env_combine3 GL_ATI_separate_stencil GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_EXT_texture_array GL_EXT_vertex_array_bgra GL_ARB_instanced_arrays GL_ARB_depth_buffer_float GL_EXT_packed_float GL_EXT_texture_shared_exponent
+GL_MAX_TEXTURE_SIZE: 8192
+GL_MAX_ACTIVE_TEXTURES_ARB: 8
+
+PIXELFORMAT: color(32-bits) Z(16-bit) stencil(0-bits)
+MODE: -1, 1024 x 576 windowed hz:1
+GAMMA: software w/ 0 overbright bits
+CPU: Intel Pentium III
+rendering primitives: single glDrawElements
+texturemode: GL_LINEAR_MIPMAP_NEAREST
+picmip: 3
+texture bits: 16
+multitexture: enabled
+compiled vertex arrays: enabled
+texenv add: enabled
+compressed textures: enabled
+anisotropy: 1.0
+NV distance fog: disabled
+Initializing Shaders
+----- finished R_Init -----
+LOADING... collision map
+LOADING... sounds
+voice chat memory size = 0
+
+.........................
+Initializing Sound Scripts
+...loading 'sound/scripts/vo_allies.sounds'
+...loading 'sound/scripts/vo_axis.sounds'
+...loading 'sound/scripts/vo_common.sounds'
+...loading 'sound/scripts/obj_railhouse.sounds'
+done.
+LOADING... graphics
+LOADING... maps/obj_railhouse.bsp
+stitched 0 LoD cracks
+...loaded 22048 faces, 658 meshes, 1186 trisurfs, 0 flares 0 foliage
+LOADING... entities
+LOADING... game media
+LOADING...  - textures
+LOADING...  - models
+LOADING...  - weapons
+LOADING...  - items
+LOADING...  - inline models
+LOADING...  - server models
+LOADING...  - particles
+LOADING...  - classes
+LOADING...  - game media done
+LOADING... flamechunks
+LOADING... clients
+CL_InitCGame: 17.47 seconds
+Com_TouchMemory: 0 msec
+[skipnotify]Glass_saga^7 entered the game
+[skipnotify]*Pasra* @sora_h^7 entered the game
+]/logfile
+"logfile" is:"2^7" default:"0^7"
+[skipnotify]*Pasra* @sora_h^7 is ready!
+[skipnotify]^3All players ready!^7
+Match starting...
+[skipnotify]*Pasra* @sora_h^7 entered the game
+[skipnotify]Glass_saga^7 entered the game
+[skipnotify]*Pasra* @sora_h^7 called a vote.  Voting for: Change map to obj_northport
+^5Vote passed!
+Current search path:
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak4.pk3 (113 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak3.pk3 (411 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak2.pk3 (2066 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak1.pk3 (1869 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak0.pk3 (728 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\mp_bin.ba9c8589.pk3 (6 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak2.pk3 (22 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak1.pk3 (10 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak0.pk3 (3725 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\mp_bin.pk3 (6 files)
+    on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_v5pack.pk3 (3 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_mapscripts.pk3 (13 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_gear.pk3 (2 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_v5pack.pk3 (3 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_ctf_server_v7.pk3 (286 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_ctf_server_v6.pk3 (286 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_allweapons2_ver.1.1.pk3 (7 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\wip_skirmish.pk3 (155 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_villa2_1.pk3 (106 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_tm_garage_b2.pk3 (31 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_The_Eighth_Storehouse_beta1.pk3 (12 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_terrorAlpha9.pk3 (17 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_superknife5.pk3 (27 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_superknife4_fixed.pk3 (21 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_slider_on_my_load.pk3 (18 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_siege2_fixed.pk3 (13 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_shiprivBeta9.pk3 (29 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_SCO_Practice.pk3 (12 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_railhouse048_4.pk3 (26 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_Portal_of_Town.pk3 (28 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_jetslidedxAlpha3.pk3 (18 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_hide_hotel.pk3 (14 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_fracture_v2.pk3 (91 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_extend_classic.pk3 (29 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_ersatz048.pk3 (34 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_dropopAlpha4.pk3 (14 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_complexityBeta13.pk3 (26 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_closedownBeta1.pk3 (15 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_bloc_012.pk3 (33 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_blockmazeAlpha3.pk3 (29 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\mp_bin.pk3 (6 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\048collections_r2.pk3 (19 files)
+    not on the pure list
+C:\Program Files\Wolfenstein - Enemy Territory/tcetest
+C:\Program Files\Wolfenstein - Enemy Territory/etmain
+
+handle 1: etconsole.log
+----------------------
+41516 files in pk3 files
+RE_Shutdown( 0 )
+Hunk_Clear: reset the hunk ok
+----- R_Init -----
+
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: NVIDIA GeForce 9400M OpenGL Engine
+GL_VERSION: 2.1 NVIDIA-1.6.24
+GL_EXTENSIONS:  GL_ARB_transpose_matrix GL_ARB_vertex_program GL_ARB_vertex_blend GL_ARB_window_pos GL_ARB_shader_objects GL_ARB_vertex_shader GL_ARB_shading_language_100 GL_EXT_multi_draw_arrays GL_EXT_clip_volume_hint GL_EXT_rescale_normal GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_gpu_program_parameters GL_EXT_geometry_shader4 GL_EXT_transform_feedback GL_APPLE_client_storage GL_APPLE_specular_vector GL_APPLE_transform_hint GL_APPLE_packed_pixels GL_APPLE_fence GL_APPLE_vertex_array_object GL_APPLE_vertex_program_evaluators GL_APPLE_element_array GL_APPLE_flush_render GL_APPLE_aux_depth_stencil GL_NV_texgen_reflection GL_NV_light_max_exponent GL_IBM_rasterpos_clip GL_SGIS_generate_mipmap GL_ARB_imaging GL_ARB_point_parameters GL_ARB_texture_env_crossbar GL_ARB_texture_border_clamp GL_ARB_multitexture GL_ARB_texture_env_add GL_ARB_texture_cube_map GL_ARB_texture_env_dot3 GL_ARB_multisample GL_ARB_texture_env_combine GL_ARB_texture_compression GL_ARB_texture_mirrored_repeat GL_ARB_shadow GL_ARB_depth_texture GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_occlusion_query GL_ARB_point_sprite GL_ARB_texture_non_power_of_two GL_ARB_vertex_buffer_object GL_ARB_pixel_buffer_object GL_ARB_draw_buffers GL_ARB_shader_texture_lod GL_ARB_color_buffer_float GL_ARB_half_float_vertex GL_ARB_texture_rg GL_ARB_texture_compression_rgtc GL_ARB_framebuffer_object GL_EXT_compiled_vertex_array GL_EXT_draw_buffers2 GL_EXT_framebuffer_object GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_texture_rectangle GL_ARB_texture_rectangle GL_EXT_texture_env_add GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_texture_lod_bias GL_EXT_abgr GL_EXT_bgra GL_EXT_stencil_wrap GL_EXT_texture_filter_anisotropic GL_EXT_secondary_color GL_EXT_blend_func_separate GL_EXT_shadow_funcs GL_EXT_stencil_two_side GL_EXT_depth_bounds_test GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_sRGB GL_EXT_blend_equation_separate GL_EXT_texture_mirror_clamp GL_EXT_packed_depth_stencil GL_EXT_bindable_uniform GL_EXT_texture_integer GL_EXT_gpu_shader4 GL_EXT_framebuffer_sRGB GL_EXT_provoking_vertex GL_APPLE_flush_buffer_range GL_APPLE_ycbcr_422 GL_APPLE_rgb_422 GL_APPLE_vertex_array_range GL_APPLE_texture_range GL_APPLE_float_pixels GL_ATI_texture_float GL_ARB_texture_float GL_ARB_half_float_pixel GL_APPLE_pixel_buffer GL_APPLE_object_purgeable GL_NV_point_sprite GL_NV_blend_square GL_NV_fog_distance GL_NV_depth_clamp GL_NV_multisample_filter_hint GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_conditional_render GL_ATI_texture_mirror_once GL_ATI_texture_env_combine3 GL_ATI_separate_stencil GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_EXT_texture_array GL_EXT_vertex_array_bgra GL_ARB_instanced_arrays GL_ARB_depth_buffer_float GL_EXT_packed_float GL_EXT_texture_shared_exponent
+GL_MAX_TEXTURE_SIZE: 8192
+GL_MAX_ACTIVE_TEXTURES_ARB: 8
+
+PIXELFORMAT: color(32-bits) Z(16-bit) stencil(0-bits)
+MODE: -1, 1024 x 576 windowed hz:1
+GAMMA: software w/ 0 overbright bits
+CPU: Intel Pentium III
+rendering primitives: single glDrawElements
+texturemode: GL_LINEAR_MIPMAP_NEAREST
+picmip: 3
+texture bits: 16
+multitexture: enabled
+compiled vertex arrays: enabled
+texenv add: enabled
+compressed textures: enabled
+anisotropy: 1.0
+NV distance fog: disabled
+Initializing Shaders
+----- finished R_Init -----
+LOADING... collision map
+LOADING... sounds
+voice chat memory size = 0
+
+.........................
+Initializing Sound Scripts
+...loading 'sound/scripts/vo_allies.sounds'
+...loading 'sound/scripts/vo_axis.sounds'
+...loading 'sound/scripts/vo_common.sounds'
+...loading 'sound/scripts/obj_northport.sounds'
+done.
+LOADING... graphics
+LOADING... maps/obj_northport.bsp
+stitched 0 LoD cracks
+...loaded 11390 faces, 491 meshes, 1132 trisurfs, 0 flares 0 foliage
+LOADING... entities
+LOADING... game media
+LOADING...  - textures
+LOADING...  - models
+LOADING...  - weapons
+LOADING...  - items
+LOADING...  - inline models
+LOADING...  - server models
+LOADING...  - particles
+LOADING...  - classes
+LOADING...  - game media done
+LOADING... flamechunks
+LOADING... clients
+CL_InitCGame:  9.42 seconds
+Com_TouchMemory: 1 msec
+[skipnotify]Glass_saga^7 entered the game
+[skipnotify]*Pasra* @sora_h^7 entered the game
+[skipnotify]*Pasra* @sora_h^7 is ready!
+[skipnotify]^3All players ready!^7
+Match starting...
+*Pasra* @sora_h^7: ^7kill me
+[skipnotify]*Pasra* @sora_h^7 entered the game
+[skipnotify]Glass_saga^7 entered the game
+Glass_saga^7: ^7ok
+[skipnotify]^2*** You have been authorized "referee" status ***
+Type: ^3ref^7 (by itself) for a list of referee commands.
+]/ref timelimit 1
+[skipnotify]^3Timelimit set to: ^51
+[skipnotify]Server: timelimit changed to 1
+*Pasra* @sora_h^7: ^7thx
+*Pasra* @sora_h^7: ^7atoha iiya
+*Pasra* @sora_h^7: ^7matou
+*Pasra* @sora_h^7: ^7hanabi
+*Pasra* @sora_h^7: ^7follow me
+[skipnotify]Timelimit hit.
+[skipnotify]^7Overall stats for: ^3*Pasra* @sora_h ^7(^21^7 Round)
+
+[skipnotify]Weapon     Acrcy Hits/Atts Kills Deaths Headshots
+[skipnotify]-------------------------------------------------
+[skipnotify]^3MP-40    :                 ^2    0 ^1     1 ^3        0
+[skipnotify]^3Grenade  : ^7  0.0 ^5   0/1    ^2    0 ^1     0
+[skipnotify]
+^3Damage Given: ^70       ^3Team Damage: ^70
+[skipnotify]^3Damage Recvd: ^7149
+[skipnotify]
+^2Rank: ^7Schutze (1 XP)
+[skipnotify]Skills         Level/Points
+[skipnotify]---------------------------
+[skipnotify]Battle Sense   ^30 (1/20)    
+[skipnotify]
+^7TEAM   Player          Kll Dth Sui TK Eff  ^3AA^7 ^2DG    ^1DR   ^6TD  ^3Score
+^7---------------------------------------------------------------------
+[skipnotify]^1Terrorists^7 ^3*Pasra* @sora_h^3   0   1   0  0^3   0^3   2^2     0^1   149^6    0^3     -1
+[skipnotify]^7---------------------------------------------------------------------
+^1Terrorists^7 ^5Totals            0   1   0  0^5   0^3  -1^2     0^1   149^6    0^3     -1
+[skipnotify]
+^7TEAM   Player          Kll Dth Sui TK Eff  ^3AA^7 ^2DG    ^1DR   ^6TD  ^3Score
+^7---------------------------------------------------------------------
+[skipnotify]^4Specops^7 ^7Glass_saga     ^3   1   0   0  0^7 100^3   2^2   149^1     0^6    0^3      1
+[skipnotify]^7---------------------------------------------------------------------
+^4Specops^7 ^5Totals            1   0   0  0^5 100^3   0^2   149^1     0^6    0^3      1
+[skipnotify]
+
+[skipnotify]Server: timelimit changed to 20
+[skipnotify]*Pasra* @sora_h^7 entered the game
+[skipnotify]Glass_saga^7 entered the game
+Glass_saga^7: ^7nageru no hayasugita
+*Pasra* @sora_h^7: ^7bye.
+*Pasra* @sora_h^7: ^7hx
+*Pasra* @sora_h^7: ^7thx
+WARNING: music file sound/music/loopMenuBCtuned.wav is not 22k stereo
+^3WARNING: unknown UI script 0
+^3WARNING: unknown UI script 1
+Current search path:
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_v5pack.pk3 (3 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_mapscripts.pk3 (13 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\_saklab_gear.pk3 (2 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_v5pack.pk3 (3 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_ctf_server_v7.pk3 (286 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_ctf_server_v6.pk3 (286 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\z_allweapons2_ver.1.1.pk3 (7 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\wip_skirmish.pk3 (155 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak4.pk3 (113 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak3.pk3 (411 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak2.pk3 (2066 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak1.pk3 (1869 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\pak0.pk3 (728 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_villa2_1.pk3 (106 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_tm_garage_b2.pk3 (31 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_The_Eighth_Storehouse_beta1.pk3 (12 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_terrorAlpha9.pk3 (17 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_superknife5.pk3 (27 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_superknife4_fixed.pk3 (21 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_slider_on_my_load.pk3 (18 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_siege2_fixed.pk3 (13 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_shiprivBeta9.pk3 (29 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_SCO_Practice.pk3 (12 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_railhouse048_4.pk3 (26 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_Portal_of_Town.pk3 (28 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_jetslidedxAlpha3.pk3 (18 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_hide_hotel.pk3 (14 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_fracture_v2.pk3 (91 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_extend_classic.pk3 (29 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_ersatz048.pk3 (34 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_dropopAlpha4.pk3 (14 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_complexityBeta13.pk3 (26 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_closedownBeta1.pk3 (15 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_bloc_012.pk3 (33 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\obj_blockmazeAlpha3.pk3 (29 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\mp_bin.pk3 (6 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\mp_bin.ba9c8589.pk3 (6 files)
+C:\Program Files\Wolfenstein - Enemy Territory\tcetest\048collections_r2.pk3 (19 files)
+C:\Program Files\Wolfenstein - Enemy Territory/tcetest
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak2.pk3 (22 files)
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak1.pk3 (10 files)
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\pak0.pk3 (3725 files)
+C:\Program Files\Wolfenstein - Enemy Territory\etmain\mp_bin.pk3 (6 files)
+C:\Program Files\Wolfenstein - Enemy Territory/etmain
+
+handle 1: etconsole.log
+handle 2: sound/music/loopMenuBCtuned.wav
+----------------------
+51895 files in pk3 files
+********************
+ERROR: Disconnected from server
+********************
+RE_Shutdown( 0 )
+Hunk_Clear: reset the hunk ok
+----- R_Init -----
+
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: NVIDIA GeForce 9400M OpenGL Engine
+GL_VERSION: 2.1 NVIDIA-1.6.24
+GL_EXTENSIONS:  GL_ARB_transpose_matrix GL_ARB_vertex_program GL_ARB_vertex_blend GL_ARB_window_pos GL_ARB_shader_objects GL_ARB_vertex_shader GL_ARB_shading_language_100 GL_EXT_multi_draw_arrays GL_EXT_clip_volume_hint GL_EXT_rescale_normal GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_gpu_program_parameters GL_EXT_geometry_shader4 GL_EXT_transform_feedback GL_APPLE_client_storage GL_APPLE_specular_vector GL_APPLE_transform_hint GL_APPLE_packed_pixels GL_APPLE_fence GL_APPLE_vertex_array_object GL_APPLE_vertex_program_evaluators GL_APPLE_element_array GL_APPLE_flush_render GL_APPLE_aux_depth_stencil GL_NV_texgen_reflection GL_NV_light_max_exponent GL_IBM_rasterpos_clip GL_SGIS_generate_mipmap GL_ARB_imaging GL_ARB_point_parameters GL_ARB_texture_env_crossbar GL_ARB_texture_border_clamp GL_ARB_multitexture GL_ARB_texture_env_add GL_ARB_texture_cube_map GL_ARB_texture_env_dot3 GL_ARB_multisample GL_ARB_texture_env_combine GL_ARB_texture_compression GL_ARB_texture_mirrored_repeat GL_ARB_shadow GL_ARB_depth_texture GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_occlusion_query GL_ARB_point_sprite GL_ARB_texture_non_power_of_two GL_ARB_vertex_buffer_object GL_ARB_pixel_buffer_object GL_ARB_draw_buffers GL_ARB_shader_texture_lod GL_ARB_color_buffer_float GL_ARB_half_float_vertex GL_ARB_texture_rg GL_ARB_texture_compression_rgtc GL_ARB_framebuffer_object GL_EXT_compiled_vertex_array GL_EXT_draw_buffers2 GL_EXT_framebuffer_object GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_texture_rectangle GL_ARB_texture_rectangle GL_EXT_texture_env_add GL_EXT_blend_color GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_texture_lod_bias GL_EXT_abgr GL_EXT_bgra GL_EXT_stencil_wrap GL_EXT_texture_filter_anisotropic GL_EXT_secondary_color GL_EXT_blend_func_separate GL_EXT_shadow_funcs GL_EXT_stencil_two_side GL_EXT_depth_bounds_test GL_EXT_texture_compression_s3tc GL_EXT_texture_compression_dxt1 GL_EXT_texture_sRGB GL_EXT_blend_equation_separate GL_EXT_texture_mirror_clamp GL_EXT_packed_depth_stencil GL_EXT_bindable_uniform GL_EXT_texture_integer GL_EXT_gpu_shader4 GL_EXT_framebuffer_sRGB GL_EXT_provoking_vertex GL_APPLE_flush_buffer_range GL_APPLE_ycbcr_422 GL_APPLE_rgb_422 GL_APPLE_vertex_array_range GL_APPLE_texture_range GL_APPLE_float_pixels GL_ATI_texture_float GL_ARB_texture_float GL_ARB_half_float_pixel GL_APPLE_pixel_buffer GL_APPLE_object_purgeable GL_NV_point_sprite GL_NV_blend_square GL_NV_fog_distance GL_NV_depth_clamp GL_NV_multisample_filter_hint GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_conditional_render GL_ATI_texture_mirror_once GL_ATI_texture_env_combine3 GL_ATI_separate_stencil GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_EXT_texture_array GL_EXT_vertex_array_bgra GL_ARB_instanced_arrays GL_ARB_depth_buffer_float GL_EXT_packed_float GL_EXT_texture_shared_exponent
+GL_MAX_TEXTURE_SIZE: 8192
+GL_MAX_ACTIVE_TEXTURES_ARB: 8
+
+PIXELFORMAT: color(32-bits) Z(16-bit) stencil(0-bits)
+MODE: -1, 1024 x 576 windowed hz:1
+GAMMA: software w/ 0 overbright bits
+CPU: Intel Pentium III
+rendering primitives: single glDrawElements
+texturemode: GL_LINEAR_MIPMAP_NEAREST
+picmip: 3
+texture bits: 16
+multitexture: enabled
+compiled vertex arrays: enabled
+texenv add: enabled
+compressed textures: enabled
+anisotropy: 1.0
+NV distance fog: disabled
+Initializing Shaders
+----- finished R_Init -----
+^5PunkBuster Client: Not Connected to a Server
+WARNING: music file sound/music/loopMenuBCtuned.wav is not 22k stereo
+^3WARNING: unknown UI script 0
+^3WARNING: unknown UI script 1
+WARNING: music file sound/music/loopIntrotuned.wav is not 22k stereo
+----- CL_Shutdown -----
+RE_Shutdown( 1 )
+Shutting down OpenGL subsystem
+...wglMakeCurrent( NULL, NULL ): success
+...deleting GL context: success
+...releasing DC: success
+...destroying window
+...shutting down QGL
+...unloading OpenGL DLL
+-----------------------

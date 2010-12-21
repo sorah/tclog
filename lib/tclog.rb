@@ -99,11 +99,18 @@ module TCLog
     end
     attr_reader :name
   end
-  def self.analyze(logfile)
+
+  # logfile  = String: filename
+  #            IO:     io
+  #
+  # gametype = :obj => "Objective"
+  #            :ctf => "Capture The Flag"
+  #            :bc  => "BodyCount"
+  def self.analyze(logfile, gametype = :obj)
     # Load file
-    # "/Users/sorah/tmp/stats2.log"
     log = case logfile
           when File, IO
+            logfile.readlines.map(&:chomp)
           when String
             File.readlines(logfile).map(&:chomp)
           else
