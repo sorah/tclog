@@ -23,9 +23,9 @@ module TCLog
       @rounds << Round.new(nil, true, map_name); self
     end
 
-    def add_round(specops,terrorists)
+    def add_round(specops,terrorists,won)
       @round_n += 1
-      r = Round.new(self, @round_n)
+      r = Round.new(self, @round_n, won)
       r.specops = specops.dup
       r.terrorists = terrorists.dup
       @rounds << r
@@ -43,8 +43,9 @@ module TCLog
     attr_reader :rounds, :players
   end
   class Round
-    def initialize(game, n, map_changing = false, map_name = nil)
+    def initialize(game, n, win, map_changing = false, map_name = nil)
       @game = game
+      @won = win
       @round_number = n
       @map_changing = map_changing
       @specops = {}
@@ -209,7 +210,7 @@ module TCLog
             map_change = nil
           else
             match_flag = false
-            game.add_round(specops_total,terrorists_total)
+            game.add_round(specops_total,terrorists_total, match_wins)
             match_flag = true
           end
         else
