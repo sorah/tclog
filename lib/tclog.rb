@@ -4,7 +4,7 @@ module TCLog
       @orders = orders
       @gametype = gametype
       @rounds = []
-      @round_n = 0
+      @round_n = -1
       @players = {}
       class << @players
         def [](x)
@@ -23,7 +23,7 @@ module TCLog
 
 
     def add_map(map_name)
-      @rounds << Round.new(nil, nil, :map, true, map_name); self
+      @rounds << Round.new(self, nil, :map, true, map_name); self
     end
 
     def add_round(specops,terrorists,won)
@@ -58,7 +58,13 @@ module TCLog
 
     def players
       @game.players.map do |g|
-        g.results[@round_number]
+        g if @round_number && g.results[@round_number]
+      end.compact
+    end
+
+    def player_results
+      @game.players.map do |g|
+        g.results[@round_number] if @round_number
       end.compact
     end
 
@@ -101,7 +107,7 @@ module TCLog
       a[:kd] = a[:kill].to_f / a[:death].to_f
       a
     end
-    attr_reader :name
+    attr_reader :name, :results
   end
 
   # logfile  = String: filename
@@ -153,8 +159,8 @@ module TCLog
           else
             ["UnknownWin"]
           end
-        when /^(\[skipnotify\])(\^.)(Overall stats for: |)/
-          if gametype == :bc
+        when /^\^7Overall stats for:/ # /^(\[skipnotify\])(\^.)(Overall stats for: |)/
+          if [:bc, :obj].include?(gametype) 
             ["UnknownWin"]
           else
             nil
@@ -218,7 +224,7 @@ module TCLog
     terrorists_total = nil
     specops_total = nil
     vm = Proc.new do |o|
-      if o[0] == "Map"
+      if match_flag && o[0] == "Map"
         map_change = o
       end
       if o[0] == "Match"
@@ -232,6 +238,11 @@ module TCLog
           if specops_total && match_wins
             match_flag = false
             game.add_round(specops_total,terrorists_total, match_wins)
+            match = []
+            match_wins = nil
+            map_change = nil
+            terrorists_total = nil
+            specops_total = nil
             match_flag = true
           end
         else
@@ -239,7 +250,7 @@ module TCLog
         end
       end
       if o[0] == "UnknownWin"
-        match_wins = :unknown
+        match_wins = :unknown unless match_wins
       end
       if o[0] == "TerroristsWin"
         match_wins = :terrorists
