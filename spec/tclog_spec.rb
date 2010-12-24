@@ -7,7 +7,7 @@ describe TCLog do
   CTFTEST  = "#{TESTLOG}/ctftest.log"
   BCTEST   = "#{TESTLOG}/bctest.log"
   MISCTEST = "#{TESTLOG}/test.log"
-  describe ".analyze" do
+  describe "analyze" do
     it "should return TCLog::Game" do
       TCLog.analyze(OBJTEST).should be_a_kind_of(TCLog::Game)
     end
@@ -22,26 +22,26 @@ describe TCLog do
     end
   end
 
-  describe "::Game" do
+  describe "Game" do
     describe "when gametype objective," do
       before :all do
         @game = TCLog.analyze(OBJTEST)
       end
 
-      it "map changing is recorded" do
+      it "map changings have logged" do
         round = @game.rounds[0]
         round.map_changing?.should be_true
         round.map_name.should == "obj_northport"
       end
 
-      it "terrorists win by terrorists killed all of specops" do
+      it "terrorists wins by terrorists killed all of specops" do
         round = @game.rounds[1]
         round.specops[:sui].should > 0
         round.specops[:score].should < 0
         round.won.should == :terrorists
       end
 
-      it "specops win by specops killed all of terrorists" do
+      it "specops wins by specops killed all of terrorists" do
         round = @game.rounds[2]
         round.terrorists[:sui].should > 0
         round.terrorists[:score].should < 0
@@ -63,7 +63,7 @@ describe TCLog do
         round.won.should == :specops
       end
 
-      it "map changing is recorded" do
+      it "map changings have recorded" do
         round = @game.rounds[6]
         round.map_changing?.should be_true
         round.map_name.should == "obj_railhouse"
@@ -75,15 +75,15 @@ describe TCLog do
         @game = TCLog.analyze(CTFTEST, :ctf)
       end
 
-      it "terrorists win by completing flags" do
+      it "terrorists wins by completing flags" do
         @game.rounds[0].won.should == :terrorists
       end
 
-      it "specops win by completing flags" do
+      it "specops wins by completing flags" do
         @game.rounds[1].won.should == :specops
       end
 
-      it "terrorists win by killing specops and getting high score" do
+      it "terrorists wins by killing specops and getting high score" do
         @game.rounds[2].terrorists[:score].should > @game.rounds[2].specops[:score]
         @game.rounds[2].won.should == :terrorists
       end
@@ -94,25 +94,25 @@ describe TCLog do
         @game = TCLog.analyze(BCTEST, :bc)
       end
 
-      it "map changing is recorded" do
+      it "map changing have logged" do
         @game.rounds[1].map_changing?.should be_true
         @game.rounds[1].map_name.should == "obj_railhouse"
         @game.rounds[2].map_changing?.should be_true
         @game.rounds[2].map_name.should == "obj_northport"
       end
 
-      it "specops win by killing terrorists and getting high score" do
+      it "specops wins by killing terrorists and getting high score" do
         @game.rounds[3].specops[:score].should > @game.rounds[3].terrorists[:score]
         @game.rounds[3].won = :specops
       end
 
-      it "terrorists win by getting 20p" do
+      it "terrorists wins by getting 20p" do
         @game.rounds[4].terrorists[:score].should >= 20
         @game.rounds[4].won = :terrorists
       end
     end
 
-    describe "misc feature:" do
+    describe "misc features:" do
       before :all do
         @game = TCLog.analyze(MISCTEST)
       end
@@ -130,7 +130,7 @@ describe TCLog do
         end
       end
 
-      describe "round" do
+      describe "Round" do
         before :all do
           @round = @game.rounds[1]
         end
@@ -161,7 +161,7 @@ describe TCLog do
         end
       end
 
-      describe "player" do
+      describe "Player" do
         before :all do
           @player = @game.players[0]
         end
