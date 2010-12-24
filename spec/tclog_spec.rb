@@ -2,10 +2,11 @@ require "#{File.dirname(__FILE__)}/../lib/tclog.rb"
 require 'rspec'
 
 describe TCLog do
-  TESTLOG = "#{File.dirname(__FILE__)}/../misc"
-  OBJTEST = "#{TESTLOG}/objtest.log"
-  CTFTEST = "#{TESTLOG}/ctftest.log"
-  BCTEST  = "#{TESTLOG}/bctest.log"
+  TESTLOG  = "#{File.dirname(__FILE__)}/../misc"
+  OBJTEST  = "#{TESTLOG}/objtest.log"
+  CTFTEST  = "#{TESTLOG}/ctftest.log"
+  BCTEST   = "#{TESTLOG}/bctest.log"
+  MISCTEST = "#{TESTLOG}/test.log"
   describe ".analyze" do
     it "should return TCLog::Game" do
       TCLog.analyze(OBJTEST).should be_a_kind_of(TCLog::Game)
@@ -108,6 +109,73 @@ describe TCLog do
       it "terrorists win by getting 20p" do
         @game.rounds[4].terrorists[:score].should >= 20
         @game.rounds[4].won = :terrorists
+      end
+    end
+
+    describe "misc feature:" do
+      before :all do
+        @game = TCLog.analyze(MISCTEST)
+      end
+      it "rounds" do
+        @game.rounds.should be_a_kind_of(Array)
+        @game.rounds.each do |r|
+          r.should be_a_kind_of(TCLog::Round)
+        end
+      end
+
+      it "players" do
+        @game.players.should be_a_kind_of(Hash)
+        @game.players.each do |r|
+          r.should be_a_kind_of(TCLog::Player)
+        end
+      end
+
+      describe "round" do
+        before :all do
+          @round = @game.rounds[1]
+        end
+
+        it "players" do
+          @round.players.should be_a_kind_of(Array)
+          @round.players.each do |x|
+            x.should be_a_kind_of(TCLog::Player)
+          end
+
+          r = @game.rounds[2]
+          r.players.map(&:name).should_not be_include("*Pasra* sora_h")
+        end
+
+        it "player_results" do
+          @round.player_results.should be_a_kind_of(Array)
+          @round.player_results.each do |x|
+            x.should be_a_kind_of(Hash)
+          end
+        end
+
+        it "map_changing" do
+          r = @game.rounds[0]
+          r.map_changing?.should be_true
+          r.map_name.should == "obj_northport"
+          r.players.should be_empty
+          r.player_results.should be_empty
+        end
+      end
+
+      describe "player" do
+        before :all do
+          @player = @game.players[0]
+        end
+        
+        it "results" do
+          @player.results.each do |x|
+            x.should be_a_kind_of(Hash) unless x.nil?
+          end
+          @game.rounds.each_with_index do |v,i|
+            if v.map_changing? || !v.players.include?(@player)
+              @player.results[i].should be_nil
+            end
+          end
+        end
       end
     end
   end

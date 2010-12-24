@@ -5,6 +5,7 @@ module TCLog
       @gametype = gametype
       @rounds = []
       @round_n = -1
+      @round_r = -1
       @players = {}
       class << @players
         def [](x)
@@ -23,12 +24,14 @@ module TCLog
 
 
     def add_map(map_name)
-      @rounds << Round.new(self, nil, :map, true, map_name); self
+      @round_r += 1
+      @rounds << Round.new(self, nil, @round_r, :map, true, map_name); self
     end
 
     def add_round(specops,terrorists,won)
       @round_n += 1
-      r = Round.new(self, @round_n, won)
+      @round_r += 1
+      r = Round.new(self, @round_n, @round_r, won)
       r.specops = specops.dup
       r.terrorists = terrorists.dup
       @rounds << r
@@ -37,19 +40,23 @@ module TCLog
 
     def add_player(name)
       @players[name] = Player.new(name)
+      if 0 <= @round_r
+        @players[name].push_result(@round_r)
+      end
       self
     end
     
 
     def round; @round_n; end
     def [](i); @rounds[i]; end
-    attr_reader :rounds, :players, :orders, :gametype
+    attr_reader :rounds, :players, :orders, :gametype, :round_r
   end
   class Round
-    def initialize(game, n, win, map_changing = false, map_name = nil)
+    def initialize(game, n, rn, win, map_changing = false, map_name = nil)
       @game = game
       @won = win
       @round_number = n
+      @real_round_number = rn
       @map_changing = map_changing
       @specops = {}
       @terrorists = {}
@@ -58,13 +65,13 @@ module TCLog
 
     def players
       @game.players.map do |g|
-        g if @round_number && g.results[@round_number]
+        g if @round_number && g.results[@real_round_number]
       end.compact
     end
 
     def player_results
       @game.players.map do |g|
-        g.results[@round_number] if @round_number
+        g.results[@real_round_number] if @round_number
       end.compact
     end
 
@@ -84,7 +91,7 @@ module TCLog
     end
 
     def total
-      a = @results.inject({
+      a = @results.compact.inject({
         :name=>@name,
         :kill=>0,
         :death=>0,
@@ -106,6 +113,10 @@ module TCLog
       a[:rate] = (a[:dg].to_i-a[:dr].to_i)/100.0
       a[:kd] = a[:kill].to_f / a[:death].to_f
       a
+    end
+
+    def push_result(i)
+      @results[i] = nil
     end
     attr_reader :name, :results
   end
@@ -249,7 +260,7 @@ module TCLog
           unless game.players[o[1][:name]]
             game.add_player(o[1][:name])
           end
-          game.players[o[1][:name]].add_result(game.round+1,o[1])
+          game.players[o[1][:name]].add_result(game.round_r+1,o[1])
         end
       when "TerroristsTotal"
         terrorists_total = o[1] if match_flag
