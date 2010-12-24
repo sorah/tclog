@@ -176,6 +176,16 @@ describe TCLog do
             end
           end
         end
+
+        it "name" do
+          @player.name.should match(/sora_h/)
+        end
+
+        it "total" do
+          @player.total[:kill].should == 10
+          @player.total[:death].should == 16
+          @player.total[:sui].should == 1
+        end
       end
     end
   end

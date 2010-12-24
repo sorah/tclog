@@ -161,5 +161,29 @@ Defused at Main Storage [A].
 [skipnotify]^7---------------------------------------------------------------------
 ^4Specops^7 ^5Totals            0   0   0  0^5   0^3  10^2     0^1     0^6    0^3     10
 [skipnotify]
+[skipnotify]^7Overall stats for: ^3*Pasra* @sora_h ^7(^21^7 Round)
+
+[skipnotify]Weapon     Acrcy Hits/Atts Kills Deaths Headshots
+[skipnotify]-------------------------------------------------
+[skipnotify]^3No weapon info available.
+[skipnotify]
+^2Rank: ^7Schutze (0 XP)
+[skipnotify]Skills         Level/Points
+[skipnotify]---------------------------
+[skipnotify]^3No skills acquired!
+[skipnotify]
+^7TEAM   Player          Kll Dth Sui TK Eff  ^3AA^7 ^2DG    ^1DR   ^6TD  ^3Score
+^7---------------------------------------------------------------------
+[skipnotify]^1Terrorists^7 ^3*Pasra* @sora_h^3   10   16   0  0^3   0^3   6^2     0^1     0^6    0^3     10
+[skipnotify]^7---------------------------------------------------------------------
+^1Terrorists^7 ^5Totals            0   0   0  0^5   0^3  10^2     0^1     0^6    0^3     10
+[skipnotify]
+^7TEAM   Player          Kll Dth Sui TK Eff  ^3AA^7 ^2DG    ^1DR   ^6TD  ^3Score
+^7---------------------------------------------------------------------
+[skipnotify]^4Specops^7 ^7*Pasra*Glass_sa^3   0   0   0  0^7   0^3   6^2     0^1     0^6    0^3     10
+[skipnotify]^7---------------------------------------------------------------------
+^4Specops^7 ^5Totals            0   0   0  0^5   0^3  10^2     0^1     0^6    0^3     10
+[skipnotify]
+
 
 LOADING... maps/obj_railhouse.bsp

@@ -92,20 +92,19 @@ module TCLog
 
     def total
       a = @results.compact.inject({
-        :name=>@name,
-        :kill=>0,
-        :death=>0,
-        :sui=>0,
-        :tk=>0,
-        :eff=>0,
-        :aa=>0,
-        :dg=>0,
-        :dr=>0,
-        :td=>0,
-        :score=>0,
-        :rate=>0
-      }).inject do |r,i|
-        [:kill,:death,:sui,:tk,:eff,:aa,:dg,:dr,:td,:score].each do |l|
+        :name  => @name,
+        :kill  => 0,
+        :death => 0,
+        :sui   => 0,
+        :tk    => 0,
+        :eff   => 0,
+        :dg    => 0,
+        :dr    => 0,
+        :td    => 0,
+        :score => 0,
+        :rate  => 0
+      }) do |r,i|
+        [:kill,:death,:sui,:tk,:eff,:dg,:dr,:td,:score].each do |l|
           r[l] += i[l]
         end
         r
