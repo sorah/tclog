@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tclog}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shota Fukumori"]
-  s.date = %q{2010-12-24}
+  s.date = %q{2010-12-25}
   s.description = %q{Parser for etconsole.log of TrueCombat:Elite (TC:E)}
   s.email = %q{sorah@tubusu.net}
   s.extra_rdoc_files = [
