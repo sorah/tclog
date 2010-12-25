@@ -25,7 +25,8 @@ Gem::Specification.new do |s|
      "misc/ctftest.log",
      "misc/objtest.log",
      "misc/test.log",
-     "spec/tclog_spec.rb"
+     "spec/tclog_spec.rb",
+     "tclog.gemspec"
   ]
   s.homepage = %q{http://github.com/sorah/tclog}
   s.rdoc_options = ["--charset=UTF-8"]

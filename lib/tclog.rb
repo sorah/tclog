@@ -1,6 +1,13 @@
+# = TCLog
+# Author:: Shota Fukumori (sora_h)
+# Copyright:: (c) Shota Fukumori (sora_h) 2010- w/ mit license
+# License:: MIT License; License terms written in README.mkd
+#
+# This library helps TC:E stats parsing.
+# 
 module TCLog
   class Game
-    def initialize(orders = [], gametype = :obj)
+    def initialize(orders = [], gametype = :obj) # :nodoc:
       @orders = orders
       @gametype = gametype
       @rounds = []
@@ -23,12 +30,12 @@ module TCLog
     end
 
 
-    def add_map(map_name)
+    def add_map(map_name) # :nodoc:
       @round_r += 1
       @rounds << Round.new(self, nil, @round_r, :map, true, map_name); self
     end
 
-    def add_round(specops,terrorists,won)
+    def add_round(specops,terrorists,won) # :nodoc:
       @round_n += 1
       @round_r += 1
       r = Round.new(self, @round_n, @round_r, won)
@@ -38,7 +45,7 @@ module TCLog
       self
     end
 
-    def add_player(name)
+    def add_player(name) # :nodoc:
       @players[name] = Player.new(name)
       if 0 <= @round_r
         @players[name].push_result(@round_r)
@@ -47,12 +54,26 @@ module TCLog
     end
     
 
-    def round; @round_n; end
+    def round; @round_n; end # :nodoc:
+    attr_reader :round_r # :nodoc:
+
+    # Has same mean as game.rounds[i]
     def [](i); @rounds[i]; end
-    attr_reader :rounds, :players, :orders, :gametype, :round_r
+
+    # Logged rounds.
+    attr_reader :rounds
+
+    # All players.
+    attr_reader :players
+
+    # Parser VM call stacks.
+    attr_reader :orders
+
+    # Gametype. obj, bc, ctf.
+    attr_reader :gametype
   end
   class Round
-    def initialize(game, n, rn, win, map_changing = false, map_name = nil)
+    def initialize(game, n, rn, win, map_changing = false, map_name = nil) # :nodoc
       @game = game
       @won = win
       @round_number = n
@@ -63,33 +84,52 @@ module TCLog
       @map_name = map_name
     end
 
+
+    # Players which joined at this round.
     def players
       @game.players.map do |g|
         g if @round_number && g.results[@real_round_number]
       end.compact
     end
 
+    # Players result which joined at this round.
     def player_results
       @game.players.map do |g|
         g.results[@real_round_number] if @round_number
       end.compact
     end
 
+    # Is this round changing map?
     def map_changing?; @map_changing;        end
-    def map_changing=(x); @map_changing = x; end
-    attr_accessor :map_name, :specops, :terrorists, :won
+
+    def map_changing=(x); @map_changing = x; end # :nodoc:
+
+    # Next map name if this round changing map.
+    attr_accessor :map_name
+
+    # specops total scores.
+    attr_accessor :specops
+
+    # terrorists total scores.
+    attr_accessor :terrorists
+
+    # Team which won this round.
+    attr_accessor :won
+
+    # Round number at game. (Counted without map changing)
     attr_reader :round_number
   end
   class Player
-    def initialize(name)
+    def initialize(name) # :nodoc:
       @name = name
       @results = []
     end
 
-    def add_result(n, score)
+    def add_result(n, score) # :nodoc:
       @results[n] = score.merge(:round => n); self
     end
 
+    # Returns this player's total score.
     def total
       a = @results.compact.inject({
         :name  => @name,
@@ -114,18 +154,29 @@ module TCLog
       a
     end
 
-    def push_result(i)
+    def push_result(i) # :nodoc:
       @results[i] = nil
     end
-    attr_reader :name, :results
+    
+    # This player's name.
+    attr_reader :name
+
+    # This player's round results.
+    # Use compact method to use Round#round_number.
+    attr_reader :results
   end
 
-  # logfile  = String: filename
-  #            IO:     io
+
+  # [logfile]
+  #   String or IO. String is filename.
   #
-  # gametype = :obj => "Objective"
-  #            :ctf => "Capture The Flag"
-  #            :bc  => "BodyCount"
+  # [gametype]
+  #   :obj => "Objective"
+  #   :ctf => "Capture The Flag"
+  #   :bc  => "BodyCount"
+  #
+  # Parses TC:E etconsole.log.
+  # You can catch etconsole.log by /set logfile 2 at tc:e console.
   def self.analyze(logfile, gametype = :obj)
     # Load file
     log = case logfile
@@ -277,7 +328,7 @@ module TCLog
     game
   end
 
-  def self.compare_score(terrorists, specops)
+  def self.compare_score(terrorists, specops) # :nodoc:
     if terrorists[:score] > specops[:score]
       :terrorists
     else

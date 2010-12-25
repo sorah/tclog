@@ -4,8 +4,6 @@
 
     $ gem install tclog
 
-Coming soon!
-
 ## Usage
 
     require 'tclog'
