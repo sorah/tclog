@@ -33,7 +33,7 @@ module TCLog
       #
       #  Add Player with name.
       def []=(a,b)
-        @ary << a
+        @ary << a unless @ary.include?(a)
         super a,b
       end
 
@@ -42,7 +42,7 @@ module TCLog
       #
       # Add Player.
       def <<(player)
-        @ary << player.name
+        @ary << player.name unless @ary.include?(player.name)
         self[player.name] = player
         self
       end
