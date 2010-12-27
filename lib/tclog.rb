@@ -7,26 +7,66 @@
 # 
 module TCLog
   class Game
+    class PlayerArray < Hash
+      def initialize(*args) # :nodoc:
+        @ary = []
+        super *args
+      end
+
+      # [x]
+      #   String or Integer.
+      #   String finds player from name, Integer finds player from index.
+      #
+      # Get Player object.
+      def [](x)
+        if x.kind_of?(Integer)
+          self[@ary[x]] if @ary[x]
+        else
+          super x
+        end
+      end
+
+      # [a]
+      #    Player's name.
+      # [b]
+      #    TCLog::Player object.
+      #
+      #  Add Player with name.
+      def []=(a,b)
+        @ary << a
+        super a,b
+      end
+
+      # [player]
+      #   TCLog::Player object.
+      #
+      # Add Player.
+      def <<(player)
+        @ary << player.name
+        self[player.name] = player
+        self
+      end
+
+      # yield each player
+      def each # :yield: player
+        @ary.each do |name|
+          yield self[name]
+        end
+      end
+      
+      def inspect # :nodoc:
+        @ary.map do |name|
+          self[name]
+        end
+      end
+    end
     def initialize(orders = [], gametype = :obj) # :nodoc:
       @orders = orders
       @gametype = gametype
       @rounds = []
       @round_n = -1
       @round_r = -1
-      @players = {}
-      class << @players
-        def [](x)
-          if x.kind_of?(Integer)
-            self.map{|v|v}[x]
-          else
-            super x
-          end
-        end
-        
-        def each
-          super &(Proc.new{|k,v| yield v })
-        end
-      end
+      @players = PlayerArray.new
     end
 
 
@@ -46,7 +86,7 @@ module TCLog
     end
 
     def add_player(name) # :nodoc:
-      @players[name] = Player.new(name)
+      @players << Player.new(name)
       if 0 <= @round_r
         @players[name].push_result(@round_r)
       end
