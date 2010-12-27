@@ -220,7 +220,7 @@ module TCLog
   def self.analyze(logfile, gametype = :obj)
     # Load file
     log = case logfile
-          when File, IO
+          when File, IO, StringIO
             logfile.readlines.map(&:chomp)
           when String
             File.readlines(logfile).map(&:chomp)
