@@ -1,6 +1,6 @@
 # = TCLog
 # Author:: Shota Fukumori (sora_h)
-# Copyright:: (c) Shota Fukumori (sora_h) 2010- w/ mit license
+# Copyright:: (c) Shota Fukumori (sora_h) 2010 w/ mit license
 # License:: MIT License; License terms written in README.mkd
 #
 # This library helps TC:E stats parsing.
