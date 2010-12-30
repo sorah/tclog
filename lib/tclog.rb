@@ -323,7 +323,19 @@ module TCLog
     match_wins = nil
     terrorists_total = nil
     specops_total = nil
+    flag2 = false
+    include_match = orders.include?("Match")
     vm = Proc.new do |o|
+      if !match_flag && /Win$/ =~ o[0]
+        match_flag = true
+      end
+      if /Win$/ =~ o[0] && flag2 && specops_total && match_wins
+        game.add_round specops_total, terrorists_total, match_wins
+        match_wins = nil
+        terrorists_total = nil
+        specops_total = nil
+        flag2 = false
+      end
       case o[0]
       when "Match"
         if match_flag
@@ -332,9 +344,11 @@ module TCLog
             match_wins = nil
             terrorists_total = nil
             specops_total = nil
+            flag2 = false
           end
         else
           match_flag = true
+          flag2 = true
         end
         if match[-1][0] == "Map"
           game.add_map match[-1][1]
@@ -351,6 +365,7 @@ module TCLog
             game.add_player(o[1][:name])
           end
           game.players[o[1][:name]].add_result(game.round_r+1,o[1])
+          flag2 = true
         end
       when "TerroristsTotal"
         terrorists_total = o[1] if match_flag
