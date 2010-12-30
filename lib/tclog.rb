@@ -327,6 +327,38 @@ module TCLog
       case o[0]
       when "Match"
         if match_flag
+          unless specops_total
+            specops_total = {
+              :name  => "Totals",
+              :kill  => 0,
+              :death => 0,
+              :sui   => 0,
+              :tk    => 0,
+              :eff   => 0,
+              :aa    => 0,
+              :dg    => 0,
+              :dr    => 0,
+              :td    => 0,
+              :score => 0,
+              :rate  => 0,
+            }
+          end
+          unless terrorists_total
+            terrorists_total = {
+              :name  => "Totals",
+              :kill  => 0,
+              :death => 0,
+              :sui   => 0,
+              :tk    => 0,
+              :eff   => 0,
+              :aa    => 0,
+              :dg    => 0,
+              :dr    => 0,
+              :td    => 0,
+              :score => 0,
+              :rate  => 0,
+            }
+          end
           if specops_total && match_wins
             game.add_round specops_total, terrorists_total, match_wins
             match_wins = nil
