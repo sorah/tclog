@@ -327,6 +327,36 @@ module TCLog
       case o[0]
       when "Match"
         if match_flag
+          if specops_total && match_wins
+            game.add_round specops_total, terrorists_total, match_wins
+            match_wins = nil
+            terrorists_total = nil
+            specops_total = nil
+          end
+        else
+          match_flag = true
+        end
+        if match[-1][0] == "Map"
+          game.add_map match[-1][1]
+        end
+      when "UnknownWin"
+        match_wins = :unknown if match_flag
+      when "TerroristsWin"
+        match_wins = :terrorists if match_flag
+      when "SpecopsWin"
+        match_wins = :specops if match_flag
+      when "Terrorists", "Specops"
+        if match_flag
+          unless game.players[o[1][:name]]
+            game.add_player(o[1][:name])
+          end
+          game.players[o[1][:name]].add_result(game.round_r+1,o[1])
+        end
+      when "TerroristsTotal"
+        terrorists_total = o[1] if match_flag
+      when "SpecopsTotal"
+       if match_flag
+         specops_total = o[1]
           unless specops_total
             specops_total = {
               :name  => "Totals",
@@ -359,36 +389,7 @@ module TCLog
               :rate  => 0,
             }
           end
-          if specops_total && match_wins
-            game.add_round specops_total, terrorists_total, match_wins
-            match_wins = nil
-            terrorists_total = nil
-            specops_total = nil
-          end
-        else
-          match_flag = true
-        end
-        if match[-1][0] == "Map"
-          game.add_map match[-1][1]
-        end
-      when "UnknownWin"
-        match_wins = :unknown if match_flag
-      when "TerroristsWin"
-        match_wins = :terrorists if match_flag
-      when "SpecopsWin"
-        match_wins = :specops if match_flag
-      when "Terrorists", "Specops"
-        if match_flag
-          unless game.players[o[1][:name]]
-            game.add_player(o[1][:name])
-          end
-          game.players[o[1][:name]].add_result(game.round_r+1,o[1])
-        end
-      when "TerroristsTotal"
-        terrorists_total = o[1] if match_flag
-      when "SpecopsTotal"
-       if match_flag
-         specops_total = o[1]
+
          match_wins = compare_score(terrorists_total, specops_total) if match_wins == :unknown
        end
       end
