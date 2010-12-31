@@ -231,8 +231,10 @@ module TCLog
     renames = {}
     orders = log.map do |x|
       next unless /^(\[skipnotify\])(\^.)?(.+renamed|Timelimit hit)/ =~ x ||
+                  /^(\[skipnotify\])(.+ entered the game)$/          =~ x ||
                   /^(\[skipnotify\])?(\^.)?(Specops|Terrorists)/     =~ x ||
                   /^(\[skipnotify\])?(\^.)?(Planted|Defused)/        =~ x ||
+                  /^The .+ have completed the objective!/            =~ x ||
                   /^The .+ have completed the objective!/            =~ x ||
                   /^(\[skipnotify\])(\^.)(Overall stats for: |)/     =~ x ||
                   /^(LOADING\.\.\. maps|Match starting)/             =~ x
@@ -244,7 +246,7 @@ module TCLog
         when /^LOADING\.\.\. maps\/(.+?)\.bsp$/ # Map Changing?
           m = $~.captures
           ["Map",m[0]]
-        when /^Match starting/ # Match starting
+        when /^Match starting/, /^(.+ entered the game)$/ # Match starting
           ["Match"]
         when /^(Planted) at (.+?) \[(.)\]/, /^The Terrorists have completed the objective!/ # TeroWin
           m = $~.captures
@@ -326,18 +328,9 @@ module TCLog
     flag2 = false
     include_match = orders.include?("Match")
     vm = Proc.new do |o|
-      if !match_flag && /Win$/ =~ o[0]
-        match_flag = true
-      end
-      if /Win$/ =~ o[0] && flag2 && specops_total && match_wins
-        game.add_round specops_total, terrorists_total, match_wins
-        match_wins = nil
-        terrorists_total = nil
-        specops_total = nil
-        flag2 = false
-      end
       case o[0]
       when "Match"
+        next if match[-1][0] == "Match"
         if match_flag
           if specops_total && match_wins
             game.add_round specops_total, terrorists_total, match_wins
